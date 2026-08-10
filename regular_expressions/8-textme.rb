@@ -1,3 +1,4 @@
 #!/usr/bin/env ruby
-puts ARGV[0].scan(/127.0.0.[0-9]/).join
+match = ARGV[0].scan(/\[from:(.*?)\] \[to:(.*?)\] \[flags:(.*?)\]/)
+puts "#{match[0][0]},#{match[0][1]},#{match[0][2]}" if match.any?
 
